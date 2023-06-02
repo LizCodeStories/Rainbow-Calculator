@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Rubik&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+}
+
+body {
+ 
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .rainbow-background {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 200% 200%;
+    animation: rainbow-animation 7s ease infinite;
+  }
+  
+  @keyframes rainbow-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  
+  .Calculator-wrap {
+    background-color: rgb(228 228 228 / 70%);
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: right;
+  }
+
+  .bottom-calc  {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+
+  .display-bar {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+
+  .middle-cal {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .middle-bottom-calc {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .bottom-to-middle-calc {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    background-color: #7196cac7;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  button:hover {
+    background-color: purple;
+    transition: 0.5s;
+    opacity: 10;
+  }
+  
+  /* Add animated case that opens the calculator when the user enters the page */
+    .Calculator-wrap {
+        animation: openCalc 1s ease-in-out;
+    }
+
+    #animated-case {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 400px;
+        border-radius: 10px;
+        background-color: rgb(253 255 255 / 70%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        animation: openCase 1s ease forwards;
+    }
+
+    .case-top {
+        height: auto;
+        
+    }
+
+    .case-body {
+        padding: 20px;
+    }
+
+    button:hover {
+        background-color: purple;
+    }
+
+    @keyframes openCase {
+        0% {
+            height: 0;
+        }
+        100% {
+            height: 400px;
+        }
+    }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .Calculator-wrap {
+      width: 100%;
+      
+      border-radius: 0;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .Calculator-wrap {
+      width: 100%;
+      
+      border-radius: 0;
+    }
+    
+  }
+
+  @media screen and (max-width: 320px) {
+    .Calculator-wrap {
+      width: 100%;
+      
+      border-radius: 0;
+    }
+  }
+
+  @media screen and (max-width: 280px) {
+    .Calculator-wrap {
+      width: 100%;
+      
+      border-radius: 0;
+      overflow: hidden;
+    }
+  }
+
+  
+    
+
+
